@@ -1,0 +1,163 @@
+:root {
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --primary-color:#ee4d2d;
+    --primary-color-rgba:rgb(238, 77, 45);
+    --header-logo-height : 60px;
+    --header-height:150px;    
+    --hover-list-color: #f3f3f3;
+    --second-color: #EE4D2D;    
+    --border-color: #ddd;
+    --star-gold: #FFCE3D;
+    --header-height: 120px;
+    --navbar-height: 34px;
+    --header-with-search: calc(var(--header-height) - var(--navbar-height));
+    --header-sort-bar-height: 46px;    
+    --background-primary-color: #f5f5f5;
+}
+
+* {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+/* comon */
+.mr-8 {
+    margin-right: 8px;
+}
+
+.mr-16 {
+    margin-right: 16px;
+}
+
+.mr-32 {
+    margin-right: 32px;
+}
+
+.mr-64 {
+    margin-right: 64px;
+}
+
+.separate::after {
+    content: "";
+    display: block;
+    position: absolute;
+    border: #FB9086 solid 1px;
+    top: -4px;
+    right: 180px;
+    height: 20px;
+    background-color: #FB9086;
+    margin: 2px 0;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes headerNotifyGrowth {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    } 
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+    
+}
+
+ /* Button style */
+ .btn {
+    min-width: 142px;
+    height: 36px;
+    text-decoration: none;
+    border-radius: 4px;
+    border: none;
+    font-size: 1.4rem;
+    padding: 0;
+    outline: none;
+    display: inline-flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.5);
+
+}
+
+.btn.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn.btn--disable {
+    cursor: default;
+    background-color: #c3c3c3;
+}
+
+.btn--with-icon {
+    border: 1px solid;
+    width: 200px;
+    background-color: var(--white-color);
+}
+
+.btn--with-icon:hover {
+    opacity: 0.3;
+}
+
+.btn--with-icon.btn--with-icon-fb {
+    color: var(--white-color);
+    background-color: #3A5A98;
+}
+
+.btn--with-icon.btn--with-icon-gg {
+    color: var(--white-color);
+    background-color: #f00c0c;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6rem;
+}
+
+.pagination-item {
+    list-style: none;
+    margin: 0 8px;    
+}
+
+.pagination-item__link {
+    --height: 30px;
+    text-decoration: none;
+    color: #696969;
+    min-width: 40px;
+    height: var(--height);
+    display: block;
+    text-align: center;
+    line-height: var(--height);
+}
+
+.pagination-item--active .pagination-item__link {
+    color: var(--white-color);
+    background-color: var(--second-color);
+}
